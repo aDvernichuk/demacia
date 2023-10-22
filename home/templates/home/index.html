@@ -1,14 +1,16 @@
 <html>
+<head>
+<link rel="stylesheet" type="text/css" href="indexStyle.css">
+<title>{% block title %}Codename: DEMACIA{% endblock %}</title>
+</head>
+
     {% if games_list %}
         <ul>
         {% for game in games_list %}
             <li><a href="/home/{{ game.gamename }}/">{{ game.gamename }}</a></li>
-        {% endfor %}
+        {% endfor %} 
         </ul>
     {% else %}
         <p>No games are available.</p>
     {% endif %}
 </html>
-
-
-asd
