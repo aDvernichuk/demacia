@@ -1,8 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="indexStyle.css">
+<link rel="stylesheet" href="indexStyle.css">
 <title>{% block title %}Codename: DEMACIA{% endblock %}</title>
+
+
 </head>
+<body>
+    <div class="navbar">
+        <a> Home </a>
+        <a> Game 1 </a>
+        <a> Game 2 </a>
+    </div>
 
     {% if games_list %}
         <ul>
@@ -13,4 +24,7 @@
     {% else %}
         <p>No games are available.</p>
     {% endif %}
+</body>
+<foot>
+</foot>
 </html>
