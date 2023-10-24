@@ -12,3 +12,6 @@ def blackjack(request):
 
 def slots(request):
     return HttpResponse("This is slots!")
+
+def wheel(request):
+    return HttpResponse("This is the free credit wheel!")
