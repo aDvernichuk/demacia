@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'indexStyle.css' %}">
+<title>Codename: DEMACIA</title>
+
+</head>
+<body>
+    <form method = 'post'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type = "submit" value = "Submit">
+    </form>
+
+    <h3>Dont have an account??</h3><br>
+    <a href = "{% url 'signup' %}">Sign Up Here</a>
+</body>
+</html>
