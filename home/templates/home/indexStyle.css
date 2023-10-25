@@ -21,7 +21,13 @@
   }
 
   .navbar button:hover{
-    background-color:{100,100,100,0.5};
+    background:khaki;
+    color:black;
+  }
+
+  .navbar #leftSideBar:hover{
+    background:khaki;
+    color:black;
   }
 
   .navbar #leftSideBar{
