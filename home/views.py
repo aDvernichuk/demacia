@@ -5,12 +5,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 def index(request):
-    if request.user.is_authenticated:
-        games_list = Game.objects.order_by("gamename")
-        context = {"games_list" : games_list}
-        return render(request, "home/index.html", context)
-    else:
-        return redirect('/home/signin')
+    games_list = Game.objects.order_by("gamename")
+    context = {"games_list" : games_list}
+    return render(request, "home/index.html", context)
 
 def blackjack(request):
     return HttpResponse("This is blackjack!")
@@ -68,4 +65,4 @@ def signin(request):
 
 def signout(request):
     logout(request)
-    return redirect('/home/signin/')
+    return redirect('/home')
