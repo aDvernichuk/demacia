@@ -15,8 +15,13 @@
         <button onclick="window.location.href='{% url 'slots' %}';"> Slots </button>
         <button onclick="window.location.href='{% url 'wheel' %}';"> Free Credit Wheel </button>
         {% if user.is_authenticated %}
-            <button id="leftSideBar"> Welcome, {{ user.username }} </button>
             <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
+	    {% if user.profile.credits %}
+                <button id="leftSideBar"> Credits: {{ user.profile.credits }} </button>
+            {% else %}
+		<button id="leftSideBar"> Credits: 0 </button>
+	    {% endif %}
+            <button id="leftSideBar"> Welcome, {{ user.username }} </button>
         {% else %}
             <button id="leftSideBar" onclick="window.location.href='{% url 'login' %}';"> Sign In </button>
         {% endif %}
