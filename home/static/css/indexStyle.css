@@ -1,3 +1,5 @@
+html{
+
 .navbar {
     overflow: hidden;
     background-color: black;
@@ -42,4 +44,6 @@
   
 body{
   background: grey;
+}
+
 }
