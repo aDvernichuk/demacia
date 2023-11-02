@@ -1,0 +1,57 @@
+html{
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("fonts/Comfortaa-VariableFont_wght.ttf") format("truetype");
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  margin-left:-0.8%;
+  position: fixed; 
+  top: 0; 
+  width: 100.5%; 
+}
+
+.navbar button {
+  float: left;
+  border:1px black;
+  display: block;
+  background-color:black;
+  color: rgba(225,255,6,1);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size:15px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar button:hover{
+  background:khaki;
+  color:black;
+}
+
+.navbar #leftSideBar:hover{
+  background:khaki;
+  color:black;
+}
+
+.navbar #leftSideBar{
+  float: right;
+  display: block;
+  color: #e1ff06;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navSpace{
+  height:5%;
+}
+
+body{
+background: darkgrey;
+}
+
+}

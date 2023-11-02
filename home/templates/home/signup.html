@@ -3,11 +3,108 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="{% static 'indexStyle.css' %}">
+<link rel="stylesheet" href="{% static 'genStyle.css' %}">
+<link rel="stylesheet" href="{% static 'signupStyle.css' %}">
 <title>Codename: DEMACIA</title>
+
+
+
+<style>
+
+    #signForm{
+        background-color: rgba(0,0,0,0.5);
+        color:rgba(225,255,6,1);
+        font-family: sans;
+        border:3px solid #ccc;
+        border-radius:35px;
+        box-shadow: 10px 20px 50px black;
+        width:30%;
+        margin:auto;
+    }
+
+      input[type=text], input[type=password] {
+      width:100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;d
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {outline: none;}
+    
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+    
+    #signForm button {
+      background-color:black;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border-radius: 15px;
+      cursor: pointer;
+      width: 100%;
+      opacity: 1;
+    }
+    
+    #signForm button:hover {
+      opacity:0.75;
+    }  
+    
+    .container {
+      padding: 40px;
+    }
+    
+
+</style>
 
 </head>
 <body>
+
+    <div class="navbar">
+        <button onclick="window.location.href='{% url 'index' %}';"> Home </button>
+        <button onclick="window.location.href='{% url 'blackjack' %}';"> Blackjack </button>
+        <button onclick="window.location.href='{% url 'slots' %}';"> Slots </button>
+        <button onclick="window.location.href='{% url 'wheel' %}';"> Free Credit Wheel </button>
+        {% if user.is_authenticated %}
+            <button id="leftSideBar"> Welcome, {{ user.username }} </button>
+            <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
+        {% else %}
+            <button id="leftSideBar" onclick="window.location.href='{% url 'login' %}';"> Sign In </button>
+        {% endif %}
+    </div>
+    <div id="navSpace"></div>
+
+    <form id="signForm" action="action_page.php">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+      
+          <label for="Username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="Username" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+          <div class="clearfix">
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+
+</body>
+</html>
+
+
+
+<!--
+
     <form method ='post'>
         {% csrf_token %}
         {{form.as_p}}
@@ -16,5 +113,5 @@
  
     <h3>Already Have an Account??</h3>
     <a href = "{% url 'login' %}">Sign In Here</a>
-</body>
-</html>
+
+-->
