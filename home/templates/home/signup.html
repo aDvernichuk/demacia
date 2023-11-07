@@ -10,11 +10,10 @@
 
 
 <style>
-
     #signForm{
         background-color: rgba(0,0,0,0.5);
         color:rgba(225,255,6,1);
-        font-family: sans;
+        font-family: serif;
         border:3px solid #ccc;
         border-radius:35px;
         box-shadow: 10px 20px 50px black;
@@ -56,6 +55,14 @@
     .container {
       padding: 40px;
     }
+
+    h4{
+      color:black;
+    }
+    
+    a{
+      
+    }
     
 
 </style>
@@ -85,9 +92,13 @@
           <hr>
       
           {{ form.as_p }}
+
+
           <div class="clearfix">
             <button type="submit" class="signupbtn" value="Submit">Sign Up</button>
           </div>
+          <h4>Already Have an Account?? </br>
+          <a href = "{% url 'login' %}">Sign In Here</a> </h4>
         </div>
       </form>
 
