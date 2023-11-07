@@ -1,6 +1,10 @@
 @font-face {
   font-family: "Comfortaa";
-  src: url("fonts/Comfortaa-VariableFont_wght.ttf") format("truetype");
+  src: url("/static/Comfortaa-Regular.ttf");
+}
+
+body {
+  font-family:"Comfortaa";
 }
 
 .navbar {
@@ -18,7 +22,7 @@
   display: block;
   background-color:black;
   color: rgba(225,255,6,1);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Comfortaa';
   font-size:15px;
   text-align: center;
   padding: 14px 16px;
