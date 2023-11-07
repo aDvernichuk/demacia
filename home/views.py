@@ -5,18 +5,16 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 def index(request):
-    games_list = Game.objects.order_by("gamename")
-    context = {"games_list" : games_list}
-    return render(request, "home/index.html", context)
+    return render(request, "home/index.html")
 
 def blackjack(request):
-    return HttpResponse("This is blackjack!")
+    return render(request, "home/blackjack.html")
 
 def slots(request):
-    return HttpResponse("This is slots!")
+    return render(request, "home/slots.html")
 
 def wheel(request):
-    return HttpResponse("This is the free credit wheel!")
+    return render(request, "home/wheelgame.html")
 
 def signup(request):
 
