@@ -1,5 +1,3 @@
-html{
-
 @font-face {
   font-family: "Comfortaa";
   src: url("fonts/Comfortaa-VariableFont_wght.ttf") format("truetype");
@@ -52,6 +50,4 @@ html{
 
 body{
 background: darkgrey;
-}
-
 }
