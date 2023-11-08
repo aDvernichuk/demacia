@@ -3,7 +3,7 @@
 #signForm{
   background-color: rgba(0,0,0,0.5);
   color:rgba(225,255,6,1);
-  font-family: sans;
+  font-family: 'Comfortaa';
   border:3px solid #ccc;
   border-radius:35px;
   box-shadow: 10px 20px 50px black;
@@ -14,7 +14,7 @@
 input[type=text], input[type=password] {
   width:100%;
   padding: 15px;
-  margin: 5px 0 22px 0;d
+  margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
