@@ -5,6 +5,7 @@
 
 body {
   font-family:"Comfortaa";
+  background: darkgrey;
 }
 
 .navbar {
@@ -50,8 +51,5 @@ body {
 
 #navSpace{
   height:5%;
-}
-
-body{
-background: darkgrey;
+  margin: bottom 100px;;
 }
