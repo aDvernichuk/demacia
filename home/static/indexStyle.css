@@ -1,0 +1,33 @@
+body{
+    height:100vh;
+    background-color:darkgray;
+}
+
+.mainPage{
+    height:100vh;
+}
+
+.maindiv{
+    height:100vh;
+    margin-top:5%;
+    position:absolute;
+    text-align:center;
+    border:solid black 1px;
+}
+
+#left{
+    width:25vh;
+    left:2vh;
+}
+
+#center{
+    width:50%;
+    float:center;
+    margin: 5% 25% 0% 25%;
+    border:solid red 2px;
+}
+
+#right{
+    width:25vh;
+    right:2vh;
+}
