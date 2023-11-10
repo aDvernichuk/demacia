@@ -31,8 +31,13 @@ const roll = (reel, offset = 0) => {
 	})
 };
 
+user.profile.credits
+
 // spins the slots and returns a win or loss result
-function rollAll() {
+function rollAll(bet) {
+
+	
+
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
 
 	// rolls and then gets the index values of the icons for the middle row
@@ -88,7 +93,8 @@ function rollAll() {
 				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 			) {
-				console.log('WINNER WINNER CHICKEN DINNER!!!')
+				win = bet * 5;
+
 			}
 
 			// continuously spin slots for now
