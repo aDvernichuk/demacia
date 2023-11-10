@@ -92,8 +92,6 @@ function rollAll() {
 			}
 
 			// continuously spin slots for now
-			setTimeout(rollAll, 4000);
+			//setTimeout(rollAll, 4000);
 		});
 };
-
-rollAll();

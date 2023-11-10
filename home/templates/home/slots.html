@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'slotStyle.css' %}">
     <title>Codename: SPIN TO WIN</title>
 
-    <script src="{% static 'slotsJava.js' %}"></script>
+    <script type="text/javascript" src="{% static 'slotsJava.js' %}"></script>
 
 </head>
 
@@ -37,6 +37,8 @@
         <div class="reel"></div>
         <div class="reel"></div>
     </div>
+
+    <button type="button" onclick="rollAll()">Click to Spin the Slots!</button>
 
 
 </body>
