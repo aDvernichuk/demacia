@@ -31,12 +31,10 @@ const roll = (reel, offset = 0) => {
 	})
 };
 
-user.profile.credits
+
 
 // spins the slots and returns a win or loss result
 function rollAll(bet) {
-
-	
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
 
@@ -93,9 +91,10 @@ function rollAll(bet) {
 				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 			) {
-				win = bet * 5;
-
+				user.profile.credits = user.profile.credits + (bet * 5);
 			}
+
+			user.profile.credits -= bet;
 
 			// continuously spin slots for now
 			//setTimeout(rollAll, 4000);
