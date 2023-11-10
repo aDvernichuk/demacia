@@ -10,6 +10,7 @@ body{
 .maindiv{
     height:100vh;
     margin-top:5%;
+    padding-top:3%;
     position:absolute;
     text-align:center;
     border:solid black 1px;
@@ -30,4 +31,26 @@ body{
 #right{
     width:25vh;
     right:2vh;
+}
+
+#menuTable{
+    text-align:center;
+    margin:auto;
+}
+
+#title1{
+    font-size:64px;
+    font-weight:bold;
+    color:yellow";
+}
+
+#title2{
+    font-size:48px;
+    color:yellow";
+}
+
+.menuButton{
+    width:300px;
+    height:300px;
+    border-radius:30px;
 }
