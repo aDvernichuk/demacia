@@ -14,21 +14,29 @@
         <button onclick="window.location.href='{% url 'slots' %}';"> Slots </button>
         <button onclick="window.location.href='{% url 'wheel' %}';"> Free Credit Wheel </button>
         {% if user.is_authenticated %}
-            <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
-	    {% if user.profile.credits %}
-                <button id="leftSideBar"> Credits: {{ user.profile.credits }} </button>
-            {% else %}
-		<button id="leftSideBar"> Credits: 0 </button>
-	    {% endif %}
-            <button id="leftSideBar"> Welcome, {{ user.username }} </button>
+        <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
+        {% if user.profile.credits %}
+        <button id="leftSideBar"> Credits: {{ user.profile.credits }} </button>
         {% else %}
-            <button id="leftSideBar" onclick="window.location.href='{% url 'login' %}';"> Sign In </button>
+        <button id="leftSideBar"> Credits: 0 </button>
+        {% endif %}
+        <button id="leftSideBar"> Welcome, {{ user.username }} </button>
+        {% else %}
+        <button id="leftSideBar" onclick="window.location.href='{% url 'login' %}';"> Sign In </button>
         {% endif %}
     </div>
 
+    <div class="slot_machine">
+        <div class="reel"></div>
+        <div class="reel"></div>
+        <div class="reel"></div>
+        <div class="reel"></div>
+        <div class="reel"></div>
+    </div>
+
+    <img style="position:fixed; left: 0; top: 0; height: 100vh; width: auto;" src="https://assets.codepen.io/439000/slotreel.webp">
 
 
-    
 </body>
 <foot>
 </foot>
