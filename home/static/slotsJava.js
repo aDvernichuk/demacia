@@ -96,7 +96,19 @@ function rollAll(bet) {
 
 			user.profile.credits -= bet;
 
-			// continuously spin slots for now
-			//setTimeout(rollAll, 4000);
+			
 		});
 };
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", disableButton);
+
+function disableButton() {
+	button.disabled = true;
+	button.value = "Disabled";
+	setTimeout(() => {
+		button.disabled = false;
+		button.value = "Enabled";
+	}, 8000);
+}
