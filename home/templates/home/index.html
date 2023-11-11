@@ -8,6 +8,30 @@
 <link rel="stylesheet" href="{% static 'indexStyle.css' %}">
 <title>Codename: DEMACIA</title>
 
+<script>
+
+    document.getElementById("blackJackButton").onmouseover= function() {bjText()};
+    document.getElementById("blackJackButton").onmouseout= function() {pText()};
+
+    document.getElementById('slotsButton').onmouseover= function() {slotsText()};
+    document.getElementById('slotsButton').onmouseover= function() {pText()};
+
+    document.getElementById('slotsButton').onmouseover= function() {slotsText()};
+    document.getElementById('slotsButton').onmouseover= function() {pText()};
+
+    document.getElementById('slotsButton').onmouseover= function() {slotsText()};
+    document.getElementById('slotsButton').onmouseover= function() {pText()};
+
+    function bjText(){
+        document.getElementById("itext").style.color:"red";
+    }
+
+    function pText(){
+        document.getElementById("itext").style.color:"black"
+    }
+
+</script>
+
 </head>
 <body>
     <div class="navbar">
@@ -26,7 +50,7 @@
         {% else %}
             <button id="leftSideBar" onclick="window.location.href='{% url 'login' %}';"> Sign In </button>
         {% endif %}
-    </div>
+    </div></br>
 
     <div class="mainPage">
         <div class="maindiv" id="left">
@@ -34,23 +58,30 @@ left div
         </div>
 
         <div class="maindiv" id="center">
-        <p id="title1"> CODENAME : DEMACIA </span></br>
-        <span id="title2"> Spin to Win </span></br>
+        <p style="font-size:64px"> CODENAME : DEMACIA </p>
+        <p style="font-size:48px"> Spin to Win </p>
 
         <table id="menuTable">
             <tr>
-              <td><button class="menuButton" id="blackJackButton">Blackjack</button></td>
-              <td><button class="menuButton" id="slotsButton">Slots</button></td>
+              <td><button class="menuButton" id="blackJackButton"
+                style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4b/Blackjack_board.JPG)">Blackjack</button></td>
+              <td><button class="menuButton" id="slotsButton"
+                style="background-image: url(https://www.leelanausandscasino.com/images/content/interior/lightning_link.jpg);">Slots</button></td>
             </tr>
             <tr>
-              <td><button class="menuButton" id="freeButton">Free Credit Wheel</button></td>
-              <td><button class="menuButton" id="addButton">Add Credits</button></td>
+              <td><button class="menuButton" id="freeButton"
+                style="background-image: url(https://variety.com/wp-content/uploads/2019/10/wheel-2.jpg)">Free Credit Wheel</button></td>
+              <td><button class="menuButton" id="addButton"
+                style="background-image: url(https://www.casino.com/blog/wp-content/uploads/2022/07/les-ambassadeurs-live-baccarat-dealer.jpg)">Add Credits</button></td>
             </tr>
           </table>
         </div>
 
         <div class="maindiv" id="right">
-right div
+            <div id="plaintext">
+                <span style="font-weight:bold; font-size:18px;">Instructions:</span></br>
+                <p id="itext">To learn more about a game, hover one of the buttons on the menu.</p>
+            </div>
         </div>
 
         
