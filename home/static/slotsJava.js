@@ -101,6 +101,8 @@ function rollAll(bet) {
 			console.log(creds);
 			console.log(bet);
 
+			parseFloat(JSON.parse(document.getElementById('creds').textContent)) = creds;
+
 			// continuously spin slots for now
 			//setTimeout(rollAll, 4000);
 		});
