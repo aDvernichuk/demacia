@@ -36,10 +36,11 @@ const roll = (reel, offset = 0) => {
 // spins the slots and returns a win or loss result
 function rollAll(bet) {
 
-	if (bet < 0 || bet > creds)
-	{
+	if (bet < 0) 
 		return;
-	}
+
+	else if (bet > creds) 
+		return;
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
 	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
