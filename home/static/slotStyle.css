@@ -25,3 +25,8 @@ body {
         background-repeat: repeat-y;
         background-position: 0 0;
     }
+
+.slots_input {
+    position: relative;
+    align-items: center;
+}
