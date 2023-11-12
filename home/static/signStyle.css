@@ -1,0 +1,49 @@
+body {
+    font-family:"Comfortaa";
+}
+
+#signForm{
+    background-color: rgba(0,0,0,0.5);
+    color:rgba(225,255,6,1);
+    border:3px solid #ccc;
+    border-radius:35px;
+    box-shadow: 10px 20px 50px black;
+    width:30%;
+    margin:auto;
+}
+
+input[type=text], input[type=password] {
+    width:100%;
+    padding: 15px;
+    font-family:'Comfortaa';
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {outline: none;}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+#signForm button {
+    background-color:black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    opacity: 1;
+}
+
+#signForm button:hover {
+    opacity:0.75;
+}  
+
+.container {
+    padding: 40px;
+}
