@@ -99,6 +99,7 @@ function rollAll(bet) {
 
 			creds -= bet;
 			console.log(creds);
+			console.log(bet);
 
 			// continuously spin slots for now
 			//setTimeout(rollAll, 4000);
