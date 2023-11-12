@@ -11,14 +11,14 @@ body {
 .slot_machine {
     width: 474px;
     height: 237px;
-    border: 7.9px solid red;
+    border: 7.9px solid black;
     padding: 15.8px;
     display: flex;
     justify-content: space-between;
 }
 
     .slot_machine .reel {
-        border: 1px solid red;
+        border: 500px solid black;
         width: 79px;
         height: 237px;
         background-image: url(https://assets.codepen.io/439000/slotreel.webp);
