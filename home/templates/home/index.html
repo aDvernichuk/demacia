@@ -6,31 +6,8 @@
 
 <link rel="stylesheet" href="{% static 'genStyle.css' %}">
 <link rel="stylesheet" href="{% static 'indexStyle.css' %}">
+<script type="text/javascript" src="{% static 'indexJava.js' %}"></script>
 <title>Codename: DEMACIA</title>
-
-<script>
-
-    document.getElementById("blackJackButton").onmouseover= function() {bjText()};
-    document.getElementById("blackJackButton").onmouseout= function() {pText()};
-
-    document.getElementById('slotsButton').onmouseover= function() {slotsText()};
-    document.getElementById('slotsButton').onmouseover= function() {pText()};
-
-    document.getElementById('slotsButton').onmouseover= function() {slotsText()};
-    document.getElementById('slotsButton').onmouseover= function() {pText()};
-
-    document.getElementById('slotsButton').onmouseover= function() {slotsText()};
-    document.getElementById('slotsButton').onmouseover= function() {pText()};
-
-    function bjText(){
-        document.getElementById("itext").style.color:"red";
-    }
-
-    function pText(){
-        document.getElementById("itext").style.color:"black"
-    }
-
-</script>
 
 </head>
 <body>
@@ -54,24 +31,30 @@
 
     <div class="mainPage">
         <div class="maindiv" id="left">
-left div
+            <span id="sideTitle">Rules of Blackjack</span>
+            <p>I do not know the rules of BlackJack</p>
         </div>
 
         <div class="maindiv" id="center">
         <p style="font-size:64px"> CODENAME : DEMACIA </p>
         <p style="font-size:48px"> Spin to Win </p>
+        <hr class="hrcolor">
 
         <table id="menuTable">
             <tr>
               <td><button class="menuButton" id="blackJackButton"
+                onmouseover="bjText()" onmouseout="pText()"
                 style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4b/Blackjack_board.JPG)">Blackjack</button></td>
               <td><button class="menuButton" id="slotsButton"
+                onmouseover="slText()" onmouseout="pText()"
                 style="background-image: url(https://www.leelanausandscasino.com/images/content/interior/lightning_link.jpg);">Slots</button></td>
             </tr>
             <tr>
               <td><button class="menuButton" id="freeButton"
+                onmouseover="frText()" onmouseout="pText()"
                 style="background-image: url(https://variety.com/wp-content/uploads/2019/10/wheel-2.jpg)">Free Credit Wheel</button></td>
               <td><button class="menuButton" id="addButton"
+                onmouseover="addText()" onmouseout="pText()"
                 style="background-image: url(https://www.casino.com/blog/wp-content/uploads/2022/07/les-ambassadeurs-live-baccarat-dealer.jpg)">Add Credits</button></td>
             </tr>
           </table>
@@ -79,31 +62,13 @@ left div
 
         <div class="maindiv" id="right">
             <div id="plaintext">
-                <span style="font-weight:bold; font-size:18px;">Instructions:</span></br>
+                <span id="sideTitle">Instructions:</span></br></br>
                 <p id="itext">To learn more about a game, hover one of the buttons on the menu.</p>
             </div>
         </div>
-
-        
     </div>
     
 </body>
 <foot>
 </foot>
 </html>
-
-<!-- 
-        Test
-        
-        AUSTINS OLD CODE
-
-        {% if games_list %}
-        <ul>
-        {% for game in games_list %}
-            <li><a href="/home/{{ game.gamename }}/">{{ game.gamename }}</a></li>
-        {% endfor %} 
-        </ul>
-    {% else %}
-        <p>No games are available.</p>
-    {% endif %}
--->
