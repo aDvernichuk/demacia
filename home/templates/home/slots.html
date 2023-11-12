@@ -20,6 +20,7 @@
         {% if user.is_authenticated %}
         <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
         {% if user.profile.credits %}
+	{{ user.profile.credits|json_script:"creds" }}
         <button id="leftSideBar"> Credits: {{ user.profile.credits }} </button>
         {% else %}
         <button id="leftSideBar"> Credits: 0 </button>
@@ -41,9 +42,9 @@
     <br>
 
     <div class="slots_input">
-        <input type="number" min="1.0" max="user.profile.credits" value="1.0" name="bet" id="bet">
+        <input type="number" min="1.0" max="10.0" value="1.0" name="bet" id="bet">
         <br>
-        <button type="button" onclick="rollAll(document.getElementById('bet'))">Add bet value, then Click to Spin the Slots!</button>
+        <button type="button" onclick="rollAll(document.getElementById('bet').value)">Add bet value, then Click to Spin the Slots!</button>
     </div>
 
 </body>

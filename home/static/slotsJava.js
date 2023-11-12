@@ -37,6 +37,9 @@ const roll = (reel, offset = 0) => {
 function rollAll(bet) {
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
+	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
+	console.log(creds)
+	console.log(bet)
 
 	// rolls and then gets the index values of the icons for the middle row
 	Promise
@@ -91,10 +94,11 @@ function rollAll(bet) {
 				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 			) {
-				user.profile.credits = user.profile.credits + (bet * 5);
+				creds = creds + (bet * 5);
 			}
 
-			user.profile.credits -= bet;
+			creds -= bet;
+			console.log(creds);
 
 			// continuously spin slots for now
 			//setTimeout(rollAll, 4000);
