@@ -5,7 +5,8 @@
 
 body {
   font-family:"Comfortaa";
-  background: darkgrey;
+  background-image: url("https://media.istockphoto.com/id/117008981/photo/green-felt.jpg?s=612x612&w=0&k=20&c=OWtm7WNzE3V54NKv0SB-Cvp3bwzvGn_ATM7UqevFexY=");
+  background-size:2px;
 }
 
 .navbar {
@@ -15,6 +16,7 @@ body {
   position: fixed; 
   top: 0; 
   width: 100.5%; 
+  z-index:2;
 }
 
 .navbar button {
@@ -28,6 +30,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  z-index:3;
 }
 
 .navbar button:hover{
@@ -51,4 +54,8 @@ body {
 
 #navSpace{
   height:5%;
+}
+
+hr.hrcolor{
+  border: 1px solid rgba(225,255,6,1);
 }
