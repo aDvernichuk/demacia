@@ -47,3 +47,7 @@ hr {
 .container {
     padding: 40px;
 }
+
+a{
+    color: rgb(75,75,225,1);
+}

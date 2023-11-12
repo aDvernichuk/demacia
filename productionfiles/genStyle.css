@@ -1,6 +1,12 @@
 @font-face {
   font-family: "Comfortaa";
-  src: url("fonts/Comfortaa-VariableFont_wght.ttf") format("truetype");
+  src: url("/static/Comfortaa-Regular.ttf");
+}
+
+body {
+  font-family:"Comfortaa";
+  background-color: rgba(6,45,6,1);
+  background-size:2px;
 }
 
 .navbar {
@@ -10,6 +16,7 @@
   position: fixed; 
   top: 0; 
   width: 100.5%; 
+  z-index:2;
 }
 
 .navbar button {
@@ -18,11 +25,12 @@
   display: block;
   background-color:black;
   color: rgba(225,255,6,1);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Comfortaa';
   font-size:15px;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  z-index:3;
 }
 
 .navbar button:hover{
@@ -48,6 +56,6 @@
   height:5%;
 }
 
-body{
-background: darkgrey;
+hr.hrcolor{
+  border: 1px solid rgba(225,255,6,1);
 }
