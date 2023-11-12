@@ -39,7 +39,7 @@ function rollAll(bet) {
 	if (bet < 0) 
 		return;
 
-	else if (bet > creds) 
+	else if (creds < bet) 
 		return;
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
