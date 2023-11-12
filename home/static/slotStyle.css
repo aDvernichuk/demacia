@@ -29,4 +29,5 @@ body {
 .slots_input {
     position: relative;
     align-items: center;
+    bottom: 100px;
 }
