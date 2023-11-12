@@ -38,7 +38,7 @@ function rollAll(bet) {
 
 	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
 
-	if (bet < 0) 
+	if (bet <= 0) 
 		return;
 	if (bet > creds)
 		return;
