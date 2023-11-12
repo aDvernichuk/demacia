@@ -36,7 +36,7 @@ const roll = (reel, offset = 0) => {
 // spins the slots and returns a win or loss result
 function rollAll(bet) {
 
-	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
+	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent.valueOf));
 
 	if (bet < 0) 
 		return;
