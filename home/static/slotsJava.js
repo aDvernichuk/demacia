@@ -101,7 +101,7 @@ function rollAll(bet) {
 			console.log(creds);
 			console.log(bet);
 
-			JSON.parse(document.getElementById('creds').textContent) = creds;
+			document.getElementById('creds').textContent = creds;
 
 		});
 };
