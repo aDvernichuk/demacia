@@ -5,56 +5,57 @@
 
 body {
   font-family:"Comfortaa";
+  background-image: url("https://media.istockphoto.com/id/117008981/photo/green-felt.jpg?s=612x612&w=0&k=20&c=OWtm7WNzE3V54NKv0SB-Cvp3bwzvGn_ATM7UqevFexY=");
+  background-size:2px;
 }
 
-p {
-  font-family:"Comfortaa";
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  margin-left:-0.8%;
+  position: fixed; 
+  top: 0; 
+  width: 100.5%; 
+  z-index:2;
 }
 
-#signForm{
-  background-color: rgba(0,0,0,0.5);
-  color:rgba(225,255,6,1);
-  font-family:'Comfortaa';
-  border:3px solid #ccc;
-  border-radius:35px;
-  box-shadow: 10px 20px 50px black;
-  width:30%;
-  margin:auto;
-}
-
-input[type=text], input[type=password] {
-  width:100%;
-  padding: 15px;
-  font-family:'Comfortaa';
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {outline: none;}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-#signForm button {
+.navbar button {
+  float: left;
+  border:1px black;
+  display: block;
   background-color:black;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border-radius: 15px;
-  cursor: pointer;
-  width: 100%;
-  opacity: 1;
+  color: rgba(225,255,6,1);
+  font-family:'Comfortaa';
+  font-size:15px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  z-index:3;
 }
 
-#signForm button:hover {
-  opacity:0.75;
-}  
-
-.container {
-  padding: 40px;
+.navbar button:hover{
+  background:khaki;
+  color:black;
 }
 
+.navbar #leftSideBar:hover{
+  background:khaki;
+  color:black;
+}
+
+.navbar #leftSideBar{
+  float: right;
+  display: block;
+  color: #e1ff06;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navSpace{
+  height:5%;
+}
+
+hr.hrcolor{
+  border: 1px solid rgba(225,255,6,1);
+}
