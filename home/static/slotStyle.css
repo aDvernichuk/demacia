@@ -11,7 +11,7 @@ body {
 .slot_machine {
     width: 474px;
     height: 237px;
-    border: 1px solid black;
+    border: 7.9px solid black;
     padding: 15.8px;
     display: flex;
     justify-content: space-between;
@@ -25,9 +25,3 @@ body {
         background-repeat: repeat-y;
         background-position: 0 0;
     }
-
-.slots_input {
-    position: relative;
-    align-items: center;
-    bottom: 100px;
-}
