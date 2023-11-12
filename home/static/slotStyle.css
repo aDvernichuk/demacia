@@ -18,7 +18,7 @@ body {
 }
 
     .slot_machine .reel {
-        border: 100px solid black;
+        border: 1px solid black;
         width: 79px;
         height: 237px;
         background-image: url(https://assets.codepen.io/439000/slotreel.webp);
