@@ -35,3 +35,21 @@ input[type=number] {
         border: 2px inset #444;
         border-radius: 8px;
     }
+
+.button_b {
+    border-radius: 16px;
+    padding: 0px 57px;
+    color: #ffffff;
+    display: inline-block;
+    font: normal bold 26px/1 "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.button_a {
+    background-color: #bf9000;
+    color: #ffffff;
+}
+
+    .button_a:hover {
+        background-color: #dca600;
+    }
