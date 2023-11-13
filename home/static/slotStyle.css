@@ -44,7 +44,8 @@ input[type=number] {
     display: inline-block;
     font: normal bold 24px/1 "Open Sans", sans-serif;
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 60px;
+    margin-right: 120px;
 }
 
 .button_a {
