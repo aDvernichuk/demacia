@@ -37,8 +37,9 @@ input[type=number] {
     }
 
 .button_b {
+    bottom: 20px;
     border-radius: 16px;
-    padding: 0px 57px;
+    padding: 0px 27px;
     color: #ffffff;
     display: inline-block;
     font: normal bold 26px/1 "Open Sans", sans-serif;
