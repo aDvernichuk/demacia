@@ -16,6 +16,7 @@
         <button onclick="window.location.href='{% url 'blackjack' %}';"> Blackjack </button>
         <button onclick="window.location.href='{% url 'slots' %}';"> Slots </button>
         <button onclick="window.location.href='{% url 'wheel' %}';"> Free Credit Wheel </button>
+        <button onclick="window.location.href='{% url 'addcredits' %}';"> Add Credits </button>
         {% if user.is_authenticated %}
             <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
 	    {% if user.profile.credits %}
@@ -58,6 +59,7 @@
                 style="background-image: url(https://variety.com/wp-content/uploads/2019/10/wheel-2.jpg)">Free Credit Wheel</button></td>
               <td><button class="menuButton" id="addButton"
                 onmouseover="addText()" onmouseout="pText()"
+                onclick="window.location.href='{% url 'addcredits' %}';"
                 style="background-image: url(https://www.casino.com/blog/wp-content/uploads/2022/07/les-ambassadeurs-live-baccarat-dealer.jpg)">Add Credits</button></td>
             </tr>
           </table>

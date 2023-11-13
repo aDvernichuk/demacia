@@ -17,6 +17,7 @@
         <button onclick="window.location.href='{% url 'blackjack' %}';"> Blackjack </button>
         <button onclick="window.location.href='{% url 'slots' %}';"> Slots </button>
         <button onclick="window.location.href='{% url 'wheel' %}';"> Free Credit Wheel </button>
+        <button onclick="window.location.href='{% url 'addcredits' %}';"> Add Credits </button>
         {% if user.is_authenticated %}
         <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
         {% if user.profile.credits %}

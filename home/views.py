@@ -16,6 +16,9 @@ def slots(request):
 def wheel(request):
     return render(request, "home/wheelgame.html")
 
+def addcredits(request):
+    return render(request, "home/addcredits.html")
+
 def signup(request):
 
     if request.user.is_authenticated:

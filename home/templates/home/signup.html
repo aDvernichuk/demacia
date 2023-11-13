@@ -16,6 +16,7 @@
         <button onclick="window.location.href='{% url 'blackjack' %}';"> Blackjack </button>
         <button onclick="window.location.href='{% url 'slots' %}';"> Slots </button>
         <button onclick="window.location.href='{% url 'wheel' %}';"> Free Credit Wheel </button>
+        <button onclick="window.location.href='{% url 'addcredits' %}';"> Add Credits </button>
         {% if user.is_authenticated %}
             <button id="leftSideBar"> Welcome, {{ user.username }} </button>
             <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
@@ -44,18 +45,3 @@
 
 </body>
 </html>
-
-
-
-<!--
-
-    <form method ='post'>
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value = "Submit">
-    </form>
- 
-    <h3>Already Have an Account??</h3>
-    <a href = "{% url 'login' %}">Sign In Here</a>
-
--->

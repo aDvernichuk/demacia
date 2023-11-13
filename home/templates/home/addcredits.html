@@ -6,6 +6,44 @@
 <link rel="stylesheet" href="{% static 'genStyle.css' %}">
 <title>Codename: ADD CREDITS</title>
 
+
+<style>
+
+    #mainDiv{
+        width:90vh;
+        height:90vh;
+        margin:auto;
+    }
+
+    #creditInput{
+        padding-top:20vh;
+        margin:auto;
+        text-align:center;
+        width:20vh;
+        height:20vh;
+    }
+
+    #creditInput label{
+        color:rgba(225,225,6,1);
+        font-size:24px;
+    }
+
+    #creditInput input{
+        width:20vh;
+        height:2vh;
+        margin-top:10px;
+    }
+
+    #creditInput button{
+        color:rgba(225,225,6,1);
+        background-color:black;
+        border-radius:15px;
+        border:1px solid white;
+        margin-top:10px;
+    }
+
+</style>
+
 </head>
 <body>
     <div class="navbar">
@@ -13,6 +51,7 @@
         <button onclick="window.location.href='{% url 'blackjack' %}';"> Blackjack </button>
         <button onclick="window.location.href='{% url 'slots' %}';"> Slots </button>
         <button onclick="window.location.href='{% url 'wheel' %}';"> Free Credit Wheel </button>
+        <button onclick="window.location.href='{% url 'addcredits' %}';"> Add Credits </button>
         {% if user.is_authenticated %}
             <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
 	    {% if user.profile.credits %}
@@ -24,8 +63,15 @@
         {% else %}
             <button id="leftSideBar" onclick="window.location.href='{% url 'login' %}';"> Sign In </button>
         {% endif %}
-    </div>
+    </div></br>
 
+    <div id="mainDiv">
+        <form id="creditInput">
+            <label for="addInput">Add Credits:</label></br>
+            <input type="number" id="addInput"></br>
+            <button id="addButton">Add</button>         <!-- NEED TO ADD ONCLICK FUNTION FOR THIS BUTTON TO ADD CREDITS -->
+        </form>
+    </div>
 
     
 </body>
