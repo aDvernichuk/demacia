@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Game
+from .models import Profile
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 def index(request):
@@ -17,7 +18,18 @@ def wheel(request):
     return render(request, "home/wheelgame.html")
 
 def addcredits(request):
-    return render(request, "home/addcredits.html")
+    if request.method == "POST":
+        if request.user.is_authenticated:
+            u = User.objects.get(id=request.user.id)
+            value = int(request.POST.get('value'))
+            u.profile.credits += value
+            u.profile.save()
+            return render(request, "home/addcredits.html")
+        else:
+            form = AuthenticationForm()
+            return render(request, 'home/signin.html', {'form':form})
+    else:
+        return render(request, "home/addcredits.html")
 
 def signup(request):
 

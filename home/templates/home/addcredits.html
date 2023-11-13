@@ -30,10 +30,11 @@
     </div></br>
 
     <div id="mainDiv">
-        <form id="creditInput">
+        <form id="creditInput" method="POST">
+	    {% csrf_token %}
             <label for="addInput">Add Credits:</label></br>
-            <input type="number" id="addInput"></br>
-            <button id="addButton">Add</button>         <!-- NEED TO ADD ONCLICK FUNTION FOR THIS BUTTON TO ADD CREDITS -->
+            <input type="number" id="addInput" name="value"></br>
+            <input type="submit" id="addButton" value="Update">Add</button>
         </form>
     </div>
 
