@@ -35,15 +35,3 @@ input[type=number] {
         border: 2px inset #444;
         border-radius: 8px;
     }
-
-.button_wrap {
-    text-align: center;
-    background: #bf9000;
-    border-radius: 16px;
-    padding: 20px 70px;
-    color: #ffffff;
-    display: inline-block;
-    font: normal bold 26px/1 "Open Sans", sans-serif;
-    text-align: center;
-}
-
