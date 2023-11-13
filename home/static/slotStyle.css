@@ -37,7 +37,7 @@ input[type=number] {
     }
 
 .button_b {
-    position: relative;
+    position: absolute;
     border-radius: 16px;
     padding: 0px 24px;
     color: #ffffff;
@@ -45,6 +45,7 @@ input[type=number] {
     font: normal bold 24px/1 "Open Sans", sans-serif;
     text-align: center;
     margin-top: 60px;
+    left: 120px;
 }
 
 .button_a {
