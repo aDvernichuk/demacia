@@ -36,6 +36,8 @@ const roll = (reel, offset = 0) => {
 // spins the slots and returns a win or loss result
 function rollAll(bet) {
 
+	document.getElementById("slots_button").disabled = true;
+
 	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
 
 	if (bet <= 0) 
@@ -108,6 +110,7 @@ function rollAll(bet) {
 			console.log(bet);
 
 			document.getElementById('creds').textContent = creds;
+			document.getElementById("slots_button").disabled = false;
 
 		});
 };
