@@ -44,14 +44,17 @@
             <tr>
               <td><button class="menuButton" id="blackJackButton"
                 onmouseover="bjText()" onmouseout="pText()"
+                onclick="window.location.href='{% url 'blackjack' %}';"
                 style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4b/Blackjack_board.JPG)">Blackjack</button></td>
               <td><button class="menuButton" id="slotsButton"
                 onmouseover="slText()" onmouseout="pText()"
+                onclick="window.location.href='{% url 'slots' %}';"
                 style="background-image: url(https://www.leelanausandscasino.com/images/content/interior/lightning_link.jpg);">Slots</button></td>
             </tr>
             <tr>
               <td><button class="menuButton" id="freeButton"
                 onmouseover="frText()" onmouseout="pText()"
+                onclick="window.location.href='{% url 'wheel' %}';"
                 style="background-image: url(https://variety.com/wp-content/uploads/2019/10/wheel-2.jpg)">Free Credit Wheel</button></td>
               <td><button class="menuButton" id="addButton"
                 onmouseover="addText()" onmouseout="pText()"
