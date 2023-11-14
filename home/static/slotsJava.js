@@ -166,6 +166,7 @@ function rollAll(bet) {
 
 
 			creds -= bet;
+			alert("You have lost: ", bet ,"credits! Play Again?")
 			console.log(creds);
 			console.log(bet);
 
