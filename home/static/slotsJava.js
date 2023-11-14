@@ -275,7 +275,7 @@ function rollAll(bet) {
 				alert("You have lost: " + bet + " credits! Play Again?")
 			}
 
-			document.getElementById('bet').value = 0.0;
+			document.getElementById('bet').value = 10.0;
 			setTimeout(function () { document.getElementById("slots_button").disabled = false; }, 9000);
 			console.log(creds);
 			console.log(bet);
