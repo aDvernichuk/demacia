@@ -38,14 +38,14 @@ const roll = (reel, offset = 0) => {
 // spins the slots and returns a win or loss result
 function rollAll(bet) {
 
-	document.getElementById("slots_button").disabled = true;
-
 	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
 
-	while (bet <= 0)
+	if (bet <= 0)
 		return;
-	while (bet > creds)
+	if (bet > creds)
 		return;
+
+	document.getElementById("slots_button").disabled = true;
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
 
