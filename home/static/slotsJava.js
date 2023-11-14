@@ -45,7 +45,8 @@ function rollAll(bet) {
 	if (bet > creds)
 		return;
 
-	document.getElementById("slots_button").hidden = true;
+
+	document.getElementById("slots_button").disabled = true;
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
 
@@ -165,6 +166,7 @@ function rollAll(bet) {
 			creds -= bet;
 			alert("You have lost: " + bet + " credits! Play Again?")
 			document.getElementById('bet').value = 0.0;
+			document.getElementById("slots_button").disabled = true;
 			console.log(creds);
 			console.log(bet);
 
@@ -182,9 +184,6 @@ function rollAll(bet) {
 
 			document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
 
-
-			temp_creds = creds - bet;
-
 			fetch("", {
 				method: "POST",
 				headers: {
@@ -194,7 +193,6 @@ function rollAll(bet) {
 			})
 
 			document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
-			document.getElementById("slots_button").hidden = false;
 
 		}
 
