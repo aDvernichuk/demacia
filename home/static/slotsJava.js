@@ -396,9 +396,6 @@ function rollAll(bet) {
 			console.log(creds);
 			console.log(bet);
 
-
-			temp_creds = creds;
-
 			fetch("", {
 				method: "POST",
 				headers: {
@@ -409,6 +406,7 @@ function rollAll(bet) {
 			});
 
 			document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
+			temp_creds = creds;
 
 		}
 
