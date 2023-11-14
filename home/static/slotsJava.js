@@ -181,10 +181,9 @@ function rollAll(bet) {
 			});
 
 			document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
-		}
 
 
-			, temp_creds = creds - bet,
+			temp_creds = creds - bet;
 
 			fetch("", {
 				method: "POST",
@@ -194,8 +193,11 @@ function rollAll(bet) {
 				body: temp_creds,
 			})
 
-			, document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds,
-			document.getElementById("slots_button").hidden = false
-	)
+			document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
+			document.getElementById("slots_button").hidden = false;
 
-};
+		}
+
+	)
+	
+}
