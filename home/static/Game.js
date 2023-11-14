@@ -62,21 +62,21 @@ export default class Game extends Phaser. Scene
     // Load assets before starting the scene
     preload(){
         //load the background
-        this.load.image('background', 'assets/cardTable.png')
-        this.load.image('deck', 'assets/card_back.png')
+        this.load.image('background', '/cardTable.png')
+        this.load.image('deck', '/card_back.png')
 
         
 
         //preload the spritemap
-        this.load.spritesheet('cardTilemap', 'assets/cardsLarge_tilemap.png', { frameWidth: 64, frameHeight: 64, spacing: 1 });
+        this.load.spritesheet('cardTilemap', '/cardsLarge_tilemap.png', { frameWidth: 64, frameHeight: 64, spacing: 1 });
 
         // preload the button images
-        this.load.image('hitButton', 'assets/button_hit.png')
-        this.load.image('standButton', 'assets/button_stand.png')
-        this.load.image('keepPairButton', 'assets/button_keep-pair.png')
-        this.load.image('splitPairButton', 'assets/button_split-pair.png')
-        this.load.image('playAgainButton', 'assets/button_play-again.png')
-        this.load.image('playButton', 'assets/button_play.png')
+        this.load.image('hitButton', '/button_hit.png')
+        this.load.image('standButton', '/button_stand.png')
+        this.load.image('keepPairButton', '/button_keep-pair.png')
+        this.load.image('splitPairButton', '/button_split-pair.png')
+        this.load.image('playAgainButton', '/button_play-again.png')
+        this.load.image('playButton', '/button_play.png')
     }
 
 
