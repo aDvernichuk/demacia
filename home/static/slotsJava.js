@@ -393,8 +393,6 @@ function rollAll(bet) {
 			}
 
 			setTimeout(function () { document.getElementById("slots_button").disabled = false; }, 9000);
-			console.log(creds);
-			console.log(bet);
 
 			fetch("", {
 				method: "POST",
