@@ -199,6 +199,4 @@ function rollAll(bet) {
                         ,document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds,
 			document.getElementById("slots_button").disabled = false)
 
-});
-
-}
+};
