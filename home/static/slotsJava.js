@@ -40,10 +40,10 @@ function rollAll(bet) {
 
 	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
 
-	while (bet <= 0)
+	if (bet <= 0 || bet > creds) {
+		alert("Invlalid input! Please enter an appropriate amount to bet.")
 		return;
-	while (bet > creds)
-		return;
+    }
 
 
 	document.getElementById("slots_button").disabled = true;
