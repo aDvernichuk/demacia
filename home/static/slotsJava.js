@@ -96,193 +96,305 @@ function rollAll(bet) {
 
 				// Top W-shape match
 				|| (index_top[0] == index_middle[1] && index_middle[1] == index_top[2] && index_top[2] == index_middle[3] && index_middle[3] == index_top[4])) {
+
 				// banana
 				if (index_middle[1] == 0) {
 					bet = bet * 12.5;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// melon
 				else if (index_middle[1] == 1) {
 					bet = bet * 15;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// lemon
 				else if (index_middle[1] == 2) {
 					bet = bet * 20;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// triple bar
 				else if (index_middle[1] == 3) {
 					bet = bet * 33.3;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// bell
 				else if (index_middle[1] == 4) {
 					bet = bet * 40;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// orange
 				else if (index_middle[1] == 5) {
 					bet = bet * 50;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// plum
 				else if (index_middle[1] == 6) {
 					bet = bet * 100;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// cherry
 				else if (index_middle[1] == 7) {
 					bet = bet * 222;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// seven
 				else if (index_middle[1] == 8) {
 					bet = bet * 777;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 
 			}
 
 			// Any 3-match middle
-			if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+			else if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+
 				// banana
 				if (index_middle[2] == 0) {
 					bet = bet * 1.25;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// melon
 				else if (index_middle[2] == 1) {
 					bet = bet * 1.5;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// lemon
 				else if (index_middle[2] == 2) {
 					bet = bet * 2;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// triple bar
 				else if (index_middle[2] == 3) {
 					bet = bet * 3;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// bell
 				else if (index_middle[2] == 4) {
 					bet = bet * 3.5;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// orange
 				else if (index_middle[2] == 5) {
 					bet = bet * 5;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// plum
 				else if (index_middle[2] == 6) {
 					bet = bet * 6;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// cherry
 				else if (index_middle[2] == 7) {
 					bet = bet * 8;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// seven
 				else if (index_middle[2] == 8) {
 					bet = bet * 10;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 
 			}
 
 				// Any 4-match middle
-			if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+			else if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+
 				// banana
 				if (index_middle[1] == 0) {
 					bet = bet * 5;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// melon
 				else if (index_middle[1] == 1) {
 					bet = bet * 8;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// lemon
 				else if (index_middle[1] == 2) {
 					bet = bet * 12;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// triple bar
 				else if (index_middle[1] == 3) {
 					bet = bet * 16;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// bell
 				else if (index_middle[1] == 4) {
 					bet = bet * 20;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// orange
 				else if (index_middle[1] == 5) {
 					bet = bet * 25;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// plum
 				else if (index_middle[1] == 6) {
 					bet = bet * 30;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// cherry
 				else if (index_middle[1] == 7) {
 					bet = bet * 40;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// seven
 				else if (index_middle[1] == 8) {
 					bet = bet * 50;
-					creds += bet;
+					if (temp_creds == 0)
+						temp_creds = creds + bet;
+					else
+						temp_creds += bet;
+
 					alert("You have won: " + bet + " credits! Play Again?")
 				}
 
 			}
 
 			else {
-				creds -= bet;
+					if (temp_creds == 0)
+						temp_creds = creds - bet;
+					else
+						temp_creds -= bet;
+
 				alert("You have lost: " + bet + " credits! Play Again?")
 			}
 
-			document.getElementById('bet').value = 10.0;
+			document.getElementById('bet').value = 0;
 			setTimeout(function () { document.getElementById("slots_button").disabled = false; }, 9000);
 			console.log(creds);
 			console.log(bet);
-
-
-			temp_creds = creds;
 
 			fetch("", {
 				method: "POST",
@@ -294,16 +406,7 @@ function rollAll(bet) {
 			});
 
 			document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
-
-			fetch("", {
-				method: "POST",
-				headers: {
-					"Content-Type": "text/html",
-				},
-				body: temp_creds,
-			})
-
-			document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
+			temp_creds = creds;
 
 		}
 
