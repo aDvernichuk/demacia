@@ -99,72 +99,182 @@ function rollAll(bet) {
 				if (index_middle[1] == 0) {
 					bet = bet * 12.5;
 					creds += bet;
-					// add print statement here for wins
+					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// melon
 				else if (index_middle[1] == 1) {
 					bet = bet * 15;
 					creds += bet;
-					// add print statement here for wins
+					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// lemon
 				else if (index_middle[1] == 2) {
 					bet = bet * 20;
 					creds += bet;
-					// add print statement here for wins
+					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// triple bar
 				else if (index_middle[1] == 3) {
 					bet = bet * 33.3;
 					creds += bet;
-					// add print statement here for wins
+					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// bell
 				else if (index_middle[1] == 4) {
 					bet = bet * 40;
 					creds += bet;
-					// add print statement here for wins
+					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// orange
 				else if (index_middle[1] == 5) {
 					bet = bet * 50;
 					creds += bet;
-					// add print statement here for wins
+					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// plum
 				else if (index_middle[1] == 6) {
 					bet = bet * 100;
 					creds += bet;
-					// add print statement here for wins
+					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// cherry
 				else if (index_middle[1] == 7) {
 					bet = bet * 222;
 					creds += bet;
-					// add print statement here for wins
+					alert("You have won: " + bet + " credits! Play Again?")
 				}
 				// seven
 				else if (index_middle[1] == 8) {
 					bet = bet * 777;
 					creds += bet;
-					// add print statement here for wins
+					alert("You have won: " + bet + " credits! Play Again?")
 				}
 
 			}
 
 			// Any 3-match middle
-			if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
-
-				// Any 4-match middle
-				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
-
-			) {
-
+			if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+				// banana
+				if (index_middle[2] == 0) {
+					bet = bet * 1.25;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// melon
+				else if (index_middle[2] == 1) {
+					bet = bet * 1.5;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// lemon
+				else if (index_middle[2] == 2) {
+					bet = bet * 2;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// triple bar
+				else if (index_middle[2] == 3) {
+					bet = bet * 3;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// bell
+				else if (index_middle[2] == 4) {
+					bet = bet * 3.5;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// orange
+				else if (index_middle[2] == 5) {
+					bet = bet * 5;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// plum
+				else if (index_middle[2] == 6) {
+					bet = bet * 6;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// cherry
+				else if (index_middle[2] == 7) {
+					bet = bet * 8;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// seven
+				else if (index_middle[2] == 8) {
+					bet = bet * 10;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
 
 			}
 
-			creds -= bet;
-			alert("You have lost: " + bet + " credits! Play Again?")
+				// Any 4-match middle
+			if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+				// banana
+				if (index_middle[1] == 0) {
+					bet = bet * 5;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// melon
+				else if (index_middle[1] == 1) {
+					bet = bet * 8;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// lemon
+				else if (index_middle[1] == 2) {
+					bet = bet * 12;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// triple bar
+				else if (index_middle[1] == 3) {
+					bet = bet * 16;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// bell
+				else if (index_middle[1] == 4) {
+					bet = bet * 20;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// orange
+				else if (index_middle[1] == 5) {
+					bet = bet * 25;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// plum
+				else if (index_middle[1] == 6) {
+					bet = bet * 30;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// cherry
+				else if (index_middle[1] == 7) {
+					bet = bet * 40;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+				// seven
+				else if (index_middle[1] == 8) {
+					bet = bet * 50;
+					creds += bet;
+					alert("You have won: " + bet + " credits! Play Again?")
+				}
+
+			}
+
+			else {
+				creds -= bet;
+				alert("You have lost: " + bet + " credits! Play Again?")
+			}
+
 			document.getElementById('bet').value = 0.0;
 			setTimeout(function () { document.getElementById("slots_button").disabled = false; }, 9000);
 			console.log(creds);
