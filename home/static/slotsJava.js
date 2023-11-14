@@ -406,8 +406,6 @@ function rollAll(bet) {
 			});
 
 			document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
-			temp_creds = creds;
-
 		}
 
 	)
