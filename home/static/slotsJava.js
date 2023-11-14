@@ -338,6 +338,7 @@ function rollAll(bet) {
 						temp_creds += bet;
 
 					alert("You have won: " + bet + " credits! Play Again?")
+				}
 				// orange
 				else if (index_middle[1] == 5) {
 					bet = bet * 25;
