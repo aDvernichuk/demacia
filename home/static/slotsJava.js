@@ -45,7 +45,7 @@ function rollAll(bet) {
 	if (bet > creds)
 		return;
 
-	document.getElementById("slots_button").disabled = true;
+	document.getElementById("slots_button").hidden = true;
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
 
@@ -93,11 +93,9 @@ function rollAll(bet) {
 				|| (index_bottom[0] == index_middle[1] && index_middle[1] == index_bottom[2] && index_bottom[2] == index_middle[3] && index_middle[3] == index_bottom[4])
 
 				// Top W-shape match
-				|| (index_top[0] == index_middle[1] && index_middle[1] == index_top[2] && index_top[2] == index_middle[3] && index_middle[3] == index_top[4]))
-			{
+				|| (index_top[0] == index_middle[1] && index_middle[1] == index_top[2] && index_top[2] == index_middle[3] && index_middle[3] == index_top[4])) {
 				// banana
-				if (index_middle[1] == 0)
-				{
+				if (index_middle[1] == 0) {
 					bet = bet * 12.5;
 					creds += bet;
 					// add print statement here for wins
@@ -153,8 +151,8 @@ function rollAll(bet) {
 
 			}
 
-				// Any 3-match middle
-			if  ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
+			// Any 3-match middle
+			if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 				// Any 4-match middle
 				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
@@ -170,23 +168,23 @@ function rollAll(bet) {
 			console.log(creds);
 			console.log(bet);
 
-				
-				temp_creds = creds;
-				
-				fetch("", {
-                                	method: "POST",
-                                	headers: {
-                                        	"Content-Type": "text/html",
-                                	},
-                                	body: temp_creds,
 
-                        	});
+			temp_creds = creds;
 
-				document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
-			}
+			fetch("", {
+				method: "POST",
+				headers: {
+					"Content-Type": "text/html",
+				},
+				body: temp_creds,
 
-			
-            ,temp_creds = creds - bet,
+			});
+
+			document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
+		}
+
+
+			, temp_creds = creds - bet,
 
 			fetch("", {
 				method: "POST",
@@ -196,8 +194,8 @@ function rollAll(bet) {
 				body: temp_creds,
 			})
 
-                        ,document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds,
-			document.getElementById("slots_button").disabled = false
+			, document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds,
+			document.getElementById("slots_button").hidden = false
 	)
 
 };
