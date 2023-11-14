@@ -93,17 +93,77 @@ function rollAll(bet) {
 				|| (index_bottom[0] == index_middle[1] && index_middle[1] == index_bottom[2] && index_bottom[2] == index_middle[3] && index_middle[3] == index_bottom[4])
 
 				// Top W-shape match
-				|| (index_top[0] == index_middle[1] && index_middle[1] == index_top[2] && index_top[2] == index_middle[3] && index_middle[3] == index_top[4])
+				|| (index_top[0] == index_middle[1] && index_middle[1] == index_top[2] && index_top[2] == index_middle[3] && index_middle[3] == index_top[4]))
+			{
+				// banana
+				if (index_middle[1] == 0)
+				{
+					bet = bet * 12.5;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// melon
+				else if (index_middle[1] == 1) {
+					bet = bet * 15;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// lemon
+				else if (index_middle[1] == 2) {
+					bet = bet * 20;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// triple bar
+				else if (index_middle[1] == 3) {
+					bet = bet * 33.3;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// bell
+				else if (index_middle[1] == 4) {
+					bet = bet * 40;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// orange
+				else if (index_middle[1] == 5) {
+					bet = bet * 50;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// plum
+				else if (index_middle[1] == 6) {
+					bet = bet * 100;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// cherry
+				else if (index_middle[1] == 7) {
+					bet = bet * 222;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// seven
+				else if (index_middle[1] == 8) {
+					bet = bet * 777;
+					creds += bet;
+					// add print statement here for wins
+				}
+
+			}
 
 				// Any 3-match middle
-				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
+			if  ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 				// Any 4-match middle
 				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 			) {
-				creds = creds + (bet * 5);
+				
 			}
+
+
 
 			creds -= bet;
 			console.log(creds);
