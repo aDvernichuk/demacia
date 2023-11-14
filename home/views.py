@@ -34,10 +34,11 @@ def wheel(request):
 def addcredits(request):
     if request.method == "POST":
         if request.user.is_authenticated:
-            u = User.objects.get(id=request.user.id)
-            value = int(request.POST.get('value'))
-            u.profile.credits += value
-            u.profile.save()
+            if request.POST.get('value').isdigit():
+                u = User.objects.get(id=request.user.id)
+                value = int(request.POST.get('value'))
+                u.profile.credits += value
+                u.profile.save()
             return render(request, "home/addcredits.html")
         else:
             form = AuthenticationForm()

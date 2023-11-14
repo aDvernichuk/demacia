@@ -23,10 +23,10 @@
     margin-top:10px;
 }
 
-#creditInput button{
+addButton{
     color:rgba(225,225,6,1);
     background-color:black;
     border-radius:15px;
     border:1px solid white;
     margin-top:10px;
-}
+} 
