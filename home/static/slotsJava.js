@@ -160,8 +160,8 @@ function rollAll(bet) {
 				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 			) {
-<<<<<<< HEAD
-				
+
+
 			}
 
 
@@ -170,7 +170,7 @@ function rollAll(bet) {
 			alert("You have lost: ", bet ,"credits! Play Again?")
 			console.log(creds);
 			console.log(bet);
-=======
+
 				if (temp_creds == 0) {
 					temp_creds = creds + (bet * 5);
 				}
@@ -196,7 +196,6 @@ function rollAll(bet) {
                         else {
                                 temp_creds -= bet;
                         }
->>>>>>> c9df2ae (credits working in slots)
 
 			fetch("", {
 				method: "POST",
