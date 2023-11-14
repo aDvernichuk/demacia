@@ -190,8 +190,9 @@ function rollAll(bet) {
 
 			}
 
-			// Any 3-match middle
-			else if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+			// Variety 3-match 
+			else if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
+					|| (index_top[1] == index_middle[2] && index_middle[2] == index_bottom[3]) || (index_bottom[1] == index_middle[2] && index_middle[2] == index_top[3])) {
 
 				// banana
 				if (index_middle[2] == 0) {
@@ -391,7 +392,6 @@ function rollAll(bet) {
 				alert("You have lost: " + bet + " credits! Play Again?")
 			}
 
-			document.getElementById('bet').value = 0;
 			setTimeout(function () { document.getElementById("slots_button").disabled = false; }, 9000);
 			console.log(creds);
 			console.log(bet);
