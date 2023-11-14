@@ -8,6 +8,8 @@ const icon_width = 79,
 	index_bottom = [0, 0, 0, 0, 0],
 	icon_Titles = ["banana", "seven", "cherry", "grape", "orange", "bell", "triple-bar", "lemon", "watermelon"];
 
+var temp_creds = 0;
+
 // function that calculates the speed and time of the roll for each reel
 const roll = (reel, offset = 0) => {
 	const calc = (offset + 3) * num_icons + Math.round(Math.random() * num_icons);
@@ -46,8 +48,6 @@ function rollAll(bet) {
 		return;
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
-	console.log(creds)
-	console.log(bet)
 
 	// rolls and then gets the index values of the icons for the middle row
 	Promise
@@ -160,6 +160,7 @@ function rollAll(bet) {
 				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 			) {
+<<<<<<< HEAD
 				
 			}
 
@@ -169,8 +170,43 @@ function rollAll(bet) {
 			alert("You have lost: ", bet ,"credits! Play Again?")
 			console.log(creds);
 			console.log(bet);
+=======
+				if (temp_creds == 0) {
+					temp_creds = creds + (bet * 5);
+				}
+				else {
+					temp_creds = temp_creds + (bet * 5);
+				}
+				fetch("", {
+                                	method: "POST",
+                                	headers: {
+                                        	"Content-Type": "text/html",
+                                	},
+                                	body: temp_creds,
 
-			document.getElementById('creds').textContent = creds;
+                        	});
+
+				document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
+				document.getElementById("slots_button").disabled = false;
+			}
+
+			if (temp_creds == 0) {
+                                temp_creds = creds - bet;
+                        }
+                        else {
+                                temp_creds -= bet;
+                        }
+>>>>>>> c9df2ae (credits working in slots)
+
+			fetch("", {
+				method: "POST",
+				headers: {
+					"Content-Type": "text/html",
+				},
+				body: temp_creds,
+			})
+
+                        document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
 			document.getElementById("slots_button").disabled = false;
 
 		});

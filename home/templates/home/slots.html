@@ -22,7 +22,7 @@
         <button id="leftSideBar" onclick="window.location.href='{% url 'logout' %}';"> Sign Out </button>
         {% if user.profile.credits %}
 	{{ user.profile.credits|json_script:"creds" }}
-        <button id="leftSideBar"> Credits: {{ user.profile.credits }} </button>
+        <button id="leftSideBar" name="creditdisplay"> Credits: {{ user.profile.credits }} </button>
         {% else %}
         <button id="leftSideBar"> Credits: 0 </button>
         {% endif %}
