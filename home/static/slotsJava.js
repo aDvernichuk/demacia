@@ -96,6 +96,7 @@ function rollAll(bet) {
 
 				// Top W-shape match
 				|| (index_top[0] == index_middle[1] && index_middle[1] == index_top[2] && index_top[2] == index_middle[3] && index_middle[3] == index_top[4])) {
+
 				// banana
 				if (index_middle[1] == 0) {
 					bet = bet * 12.5;
@@ -154,7 +155,8 @@ function rollAll(bet) {
 			}
 
 			// Any 3-match middle
-			if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+			else if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+
 				// banana
 				if (index_middle[2] == 0) {
 					bet = bet * 1.25;
@@ -213,7 +215,8 @@ function rollAll(bet) {
 			}
 
 				// Any 4-match middle
-			if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+			else if ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])) {
+
 				// banana
 				if (index_middle[1] == 0) {
 					bet = bet * 5;
