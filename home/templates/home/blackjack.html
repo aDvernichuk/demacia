@@ -5,7 +5,9 @@
 <head>
 <link rel="stylesheet" href="{% static 'genStyle.css' %}">
 <title>Codename: BLACKJACK</title>
-
+<script
+    src="./static/phaserWeb.js">
+</script>
 </head>
 <body>
     <div class="navbar">
@@ -26,6 +28,8 @@
             <button id="leftSideBar" onclick="window.location.href='{% url 'login' %}';"> Sign In </button>
         {% endif %}
     </div>
+
+    <script type="module" src="src/main.js"></script>
 
 
 </body>
