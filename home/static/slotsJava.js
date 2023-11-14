@@ -40,9 +40,9 @@ function rollAll(bet) {
 
 	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
 
-	if (bet <= 0)
+	while (bet <= 0)
 		return;
-	if (bet > creds)
+	while (bet > creds)
 		return;
 
 
@@ -166,7 +166,7 @@ function rollAll(bet) {
 			creds -= bet;
 			alert("You have lost: " + bet + " credits! Play Again?")
 			document.getElementById('bet').value = 0.0;
-			document.getElementById("slots_button").disabled = true;
+			setTimeout(function () { document.getElementById("slots_button").disabled = false; }, 9000);
 			console.log(creds);
 			console.log(bet);
 
