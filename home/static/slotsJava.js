@@ -42,9 +42,9 @@ function rollAll(bet) {
 
 	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
 
-	if (bet <= 0) 
+	while (bet <= 0)
 		return;
-	if (bet > creds)
+	while (bet > creds)
 		return;
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
