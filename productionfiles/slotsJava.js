@@ -8,6 +8,8 @@ const icon_width = 79,
 	index_bottom = [0, 0, 0, 0, 0],
 	icon_Titles = ["banana", "seven", "cherry", "grape", "orange", "bell", "triple-bar", "lemon", "watermelon"];
 
+var temp_creds = 0;
+
 // function that calculates the speed and time of the roll for each reel
 const roll = (reel, offset = 0) => {
 	const calc = (offset + 3) * num_icons + Math.round(Math.random() * num_icons);
@@ -35,6 +37,15 @@ const roll = (reel, offset = 0) => {
 
 // spins the slots and returns a win or loss result
 function rollAll(bet) {
+
+	document.getElementById("slots_button").disabled = true;
+
+	var creds = parseFloat(JSON.parse(document.getElementById('creds').textContent));
+
+	while (bet <= 0)
+		return;
+	while (bet > creds)
+		return;
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
 
@@ -82,21 +93,111 @@ function rollAll(bet) {
 				|| (index_bottom[0] == index_middle[1] && index_middle[1] == index_bottom[2] && index_bottom[2] == index_middle[3] && index_middle[3] == index_bottom[4])
 
 				// Top W-shape match
-				|| (index_top[0] == index_middle[1] && index_middle[1] == index_top[2] && index_top[2] == index_middle[3] && index_middle[3] == index_top[4])
+				|| (index_top[0] == index_middle[1] && index_middle[1] == index_top[2] && index_top[2] == index_middle[3] && index_middle[3] == index_top[4]))
+			{
+				// banana
+				if (index_middle[1] == 0)
+				{
+					bet = bet * 12.5;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// melon
+				else if (index_middle[1] == 1) {
+					bet = bet * 15;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// lemon
+				else if (index_middle[1] == 2) {
+					bet = bet * 20;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// triple bar
+				else if (index_middle[1] == 3) {
+					bet = bet * 33.3;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// bell
+				else if (index_middle[1] == 4) {
+					bet = bet * 40;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// orange
+				else if (index_middle[1] == 5) {
+					bet = bet * 50;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// plum
+				else if (index_middle[1] == 6) {
+					bet = bet * 100;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// cherry
+				else if (index_middle[1] == 7) {
+					bet = bet * 222;
+					creds += bet;
+					// add print statement here for wins
+				}
+				// seven
+				else if (index_middle[1] == 8) {
+					bet = bet * 777;
+					creds += bet;
+					// add print statement here for wins
+				}
+
+			}
 
 				// Any 3-match middle
-				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
+			if  ((index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 				// Any 4-match middle
 				|| (index_middle[0] == index_middle[1] && index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3]) || (index_middle[1] == index_middle[2] && index_middle[2] == index_middle[3] && index_middle[3] == index_middle[4])
 
 			) {
-				user.profile.credits = user.profile.credits + (bet * 5);
+
+
 			}
 
-			user.profile.credits -= bet;
+			creds -= bet;
+			alert("You have lost: " + bet + " credits! Play Again?")
+			document.getElementById('bet').value = 0.0;
+			console.log(creds);
+			console.log(bet);
 
-			// continuously spin slots for now
-			//setTimeout(rollAll, 4000);
-		});
+				
+				temp_creds = creds;
+				
+				fetch("", {
+                                	method: "POST",
+                                	headers: {
+                                        	"Content-Type": "text/html",
+                                	},
+                                	body: temp_creds,
+
+                        	});
+
+				document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
+				document.getElementById("slots_button").disabled = false;
+			}
+
+			
+            ,temp_creds = creds - bet,
+
+			fetch("", {
+				method: "POST",
+				headers: {
+					"Content-Type": "text/html",
+				},
+				body: temp_creds,
+			})
+
+                        ,document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds,
+			document.getElementById("slots_button").disabled = false)
+
 };
