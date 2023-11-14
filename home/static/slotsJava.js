@@ -164,19 +164,14 @@ function rollAll(bet) {
 
 			}
 
-
-
 			creds -= bet;
-			alert("You have lost: ", bet ,"credits! Play Again?")
+			alert("You have lost: " + bet + "credits! Play Again?")
 			console.log(creds);
 			console.log(bet);
 
-				if (temp_creds == 0) {
-					temp_creds = creds + (bet * 5);
-				}
-				else {
-					temp_creds = temp_creds + (bet * 5);
-				}
+				
+				temp_creds = creds;
+				
 				fetch("", {
                                 	method: "POST",
                                 	headers: {
@@ -188,14 +183,10 @@ function rollAll(bet) {
 
 				document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
 				document.getElementById("slots_button").disabled = false;
-			})
+			}
 
-			if (temp_creds == 0) {
-                                temp_creds = creds - bet;
-                        }
-                        else {
-                                temp_creds -= bet;
-                        }
+			
+            ,temp_creds = creds - bet,
 
 			fetch("", {
 				method: "POST",
@@ -205,8 +196,9 @@ function rollAll(bet) {
 				body: temp_creds,
 			})
 
-                        document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds;
-			document.getElementById("slots_button").disabled = false;
+                        ,document.getElementsByName("creditdisplay")[0].innerHTML = "Credits: " + temp_creds,
+			document.getElementById("slots_button").disabled = false)
 
-};
+});
 
+}
