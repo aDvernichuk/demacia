@@ -1,9 +1,9 @@
 //This file will be sent to blackjack.html (index) as a module that will run the game in the web browser
 
-import Phaser from './static/phaser.js'
+import Phaser from './phaser.js'
 
 //import the game scene into our main program
-import Game from './static/Game.js'
+import Game from './Game.js'
 
 export default new Phaser . Game ( {
     type: Phaser . AUTO,
