@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\home",
+    "\\home\\migrations",
     "\\home\\static",
     "\\home\\templates",
     "\\home\\templates\\home"
   ],
-  "SelectedNode": "\\home\\static\\slotsJava.js",
+  "SelectedNode": "\\home\\static\\slotStyle.css",
   "PreviewInSolutionExplorer": false
 }
