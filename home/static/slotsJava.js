@@ -47,6 +47,7 @@ function rollAll(bet) {
 
 
 	document.getElementById("slots_button").disabled = true;
+	setTimeout(function () { document.getElementById("slots_button").disabled = false; }, 9000);
 
 	const reelList = document.querySelectorAll('.slot_machine > .reel');
 
