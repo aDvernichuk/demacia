@@ -28,8 +28,22 @@ def slots(request):
     else:
         return render(request, "home/slots.html")
 
+@csrf_exempt
 def wheel(request):
-    return render(request, "home/wheelgame.html")
+    if request.method == "POST":
+        if request.user.is_authenticated:
+            u = User.objects.get(id=request.user.id)
+            value = int(request.body)
+            print(value)
+            u.profile.credits += value
+            u.profile.save()
+            return render(request, "home/wheelgame.html")
+        else:
+            form = AuthenticationForm()
+            return render(request, 'home/signin.html', {'form':form})
+    else:
+        return render(request, "home/wheelgame.html")
+
 
 def addcredits(request):
     if request.method == "POST":
